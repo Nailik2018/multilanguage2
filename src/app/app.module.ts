@@ -4,18 +4,19 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 
 // import ngx-translate and the http loader
-import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { SensorsOverviewModule } from "./pages/sensors-overview/sensors-overview.module";
+import {InstallationModule} from "./pages/installation/installation.module";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-
     // configure the imports
     HttpClientModule,
     TranslateModule.forRoot({
@@ -24,7 +25,9 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    SensorsOverviewModule,
+    InstallationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
