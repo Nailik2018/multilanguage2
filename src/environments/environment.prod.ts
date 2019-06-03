@@ -1,5 +1,5 @@
 const baseUrl = window.location.protocol + '//' + window.location.hostname +
-    (window.location.port ? ':' + window.location.port : '') + '/Practiframe/';
+    (window.location.port ? ':' + window.location.port : '') + '/MeineApp/';
 export const environment = {
     production: true,
     baseUrl: baseUrl,
