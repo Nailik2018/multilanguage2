@@ -7,6 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  burger: boolean;
   useLanguage(language: string) {
     this.translate.use(language);
   }

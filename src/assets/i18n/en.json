@@ -2,8 +2,8 @@
 	"app-component": {
 		"installation": "Installation",
 		"myApp": "My App",
-		"sensors-overview": "Sensors overview"
-	},
-	"demo.text": "This is a simple demonstration app for ngx-translate",
-	"demo.title": "Translation demo"
+		"sensors-overview": "Sensors overview",
+		"text": "This is a simple demonstration app for ngx-translate",
+		"title": "Translation demo"
+	}
 }
