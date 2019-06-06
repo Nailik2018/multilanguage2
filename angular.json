@@ -34,8 +34,6 @@
               "node_modules/hamburgers/dist/hamburgers.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.js",
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
             ],
             "es5BrowserSupport": true
           },

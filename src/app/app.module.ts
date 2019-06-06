@@ -9,10 +9,13 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SensorsOverviewModule } from "./pages/sensors-overview/sensors-overview.module";
 import {InstallationModule} from "./pages/installation/installation.module";
+import { NaviComponent } from './navi/navi.component';
+import {environment} from "../environments/environment";
 
 @NgModule({
   declarations: [
     AppComponent,
+    NaviComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,5 +41,14 @@ export class AppModule {
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+  /**
+   * URL setzen zur Sprach Datei de en und fr .json
+   * Als localhost anderer Pfad als beim kompilierten Stand
+   */
+  if (window.location.hostname === 'localhost') {
+    return new TranslateHttpLoader(http);
+  } else {
+    const serverUrl = environment.baseUrl;
+    return new TranslateHttpLoader(http, serverUrl + '/assets/i18n/', '.json');
+  }
 }

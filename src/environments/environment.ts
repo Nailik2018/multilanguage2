@@ -1,13 +1,12 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
-const baseUrl = window.location.protocol + '//' + window.location.hostname +
-    (window.location.port ? ':' + window.location.port : '') + '/MeineApp/';
+const baseUrl = 'http://192.168.80.173/multi2/';
 export const environment = {
   production: false,
   baseUrl: baseUrl,
   ajaxUrl: baseUrl + 'ajax/',
-  newAjax: baseUrl + 'angular_ajax',
+  newAjax: baseUrl + 'angular_ajax/',
 };
 
 /*
